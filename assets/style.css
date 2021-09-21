@@ -1,78 +1,144 @@
 body {
-    background-color: darkmagenta;
+ background-color: darkmagenta;
 }
 
 .header {
-    overflow: hidden;
-    background-color: lavender;
-    padding: 20px 10px;
+  overflow: hidden;
+  background-color: lavender;
+  padding: 20px 10px;
 }
-  
-  .header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: underline;
-    font-size: 18px; 
-    line-height: 25px;
-    border-radius: 4px;
+
+ 
+.header a {
+ float: left;
+ color: black;
+ text-align: center;
+ padding: 12px;
+ text-decoration: underline;
+ font-size: 18px; 
+ line-height: 25px;
+ border-radius: 4px;
 }
  
-  .header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-    }
+.header a.logo {
+ font-size: 25px;
+ font-weight: bold;
+}
   
-  .header a:hover {
-    background-color: #ddd;
-    color: black;
+.header a:hover {
+  background-color: #ddd;
+  color: black;
     
 }
   
-  .header-right {
-    float: right;
+.header-right {
+ float: right;
 }
-  /* new */
-  /* The hero image */
+
+
+ /* The hero image */
 .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
   
-    /* Set a specific height */
-    height: 0%;
+  /* Set a specific height */
+  height: 0%;
   
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .hero-text {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    color: white;
-    border: 5px solid green;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: black;
+  border: 5px solid lavender;
+  background-color: lavender;
 }
 
 .hero-image {
-    width: 100%;
-    height: 400px;
-    background-image: url('https://place-puppy.com/300x300');
-    background-size: 100% 100%;
-    border: 1px solid red;
+  width: 100%;
+  height: 400px;
+  background-image: url('https://place-puppy.com/300x300');
+  background-size: 100% 100%;
+  /* border: 1px solid red; */
 }
 
 
 
+.flex-container {
+  display: flex;
+  margin-top: 5%;
+  
+}
+
+.flex-child-magenta{
+  color: white;
+  flex-grow: 0.75;
+}
+
+.flex-child {
+  flex: 2;
+  /* border: 2px solid yellow; */
+}  
+
+.flex-child:first-child {
+  margin-right: 40px;
+  
+} 
+
+.flex-child .horizontal { 
+  display: inline; 
+  justify-content: space-between;
+  /* background-color: aqua;  */
+}
+
+
+.vl {
+  border-left: 5px solid whitesmoke;
+  height: 100px;
+  position: relative;
+  left: 25%;
+  margin-left: -3px;
+  top: 0;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a.horizontal {
+  width: 400px;
+  height: 100px;
+  /* border: 1px solid #c3c3c3; */
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 25px;
+}
+
 @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
+ .header a {
+   float: wrap;
+   display: block;
+   text-align: left;
+  }
 }
 
 
